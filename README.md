@@ -15,3 +15,6 @@ En este repositorio vamos a almacenar todos los ejercicios del módulo
 - Elemneto de lista 3
 
   Link a Wikipedia [Link](https://es.wikipedia.org/wiki/Wikipedia:Portada)
+
+  ![Esta es una imagen de ejemplo](https://www.alianzafpdual.es/wp-content/uploads/2022/01/IES-Zaidin-Vergeles_logo.png)
+  
