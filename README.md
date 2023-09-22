@@ -18,3 +18,7 @@ En este repositorio vamos a almacenar todos los ejercicios del módulo
 
   ![Esta es una imagen de ejemplo](https://www.alianzafpdual.es/wp-content/uploads/2022/01/IES-Zaidin-Vergeles_logo.png)
   
+
+|Nombre|Apellidos|
+|......|.........|
+|José Manuel|Fernández Ruiz|
