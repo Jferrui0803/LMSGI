@@ -14,4 +14,4 @@ En este repositorio vamos a almacenar todos los ejercicios del módulo
 - Elemento de listta 2
 - Elemneto de lista 3
 
-  Link a Wikipedia (Link) (https://es.wikipedia.org/wiki/Wikipedia:Portada)
+  Link a Wikipedia [Link](https://es.wikipedia.org/wiki/Wikipedia:Portada)
