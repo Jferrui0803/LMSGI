@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilo para la franja roja superior */
+    .rojo-superior {
+      background-color: #AA151B;
+      height: 33.33%;
+    }
+
+    /* Estilo para la franja amarilla central */
+    .amarillo-central {
+      background-color: #FFC400;
+      height: 33.33%;
+    }
+
+    /* Estilo para la franja roja inferior */
+    .rojo-inferior {
+      background-color: #AA151B;
+      height: 33.33%;
+    }
+
+    /* Estilo para el contenedor principal */
+    .bandera-espana {
+      width: 300px; /* Ancho de la bandera */
+      height: 200px; /* Alto de la bandera */
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <div class="bandera-espana">
+    <div class="rojo-superior"></div>
+    <div class="amarillo-central"></div>
+    <div class="rojo-inferior"></div>
+  </div>
+</body>
+</html>
