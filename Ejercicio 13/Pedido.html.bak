@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Pedido</title>
+  </head>
+  <body>
+    <h2>Taco Bell</h2>
+    <fieldset> <legend>Datos personales </legend>
+      <form action="/action_page.php"> <label for="fname">Nombre:</label><br>
+        <input id="fname" name="fname" type="text"><br>
+        <label for="lname">Apellido:</label><br>
+        <input id="lname" name="lname" type="text"><br>
+        <label for="correo">Correo electrónico:</label><br>
+        <input id="correo" name="correo" type="text"><br>
+        <label for="domicilio">Dirección</label><br>
+        <input id="domicilio" name="domicilio" type="text"><br>
+        <label for="localidad">Localidad</label><br>
+        <input id="localidad" name="localidad" type="text"><br>
+        <label for="cp">Código Postal</label><br>
+        <input id="cp" name="cp" type="text"><br>
+        <label for="telefono">Teléfono</label><br>
+        <input id="telefono" name="" type="text"><br>
+      </form>
+    </fieldset>
+    <fieldset> <legend>Elija la opción de entrega </legend>
+      <form> <input id="tienda" name="fav_language" value="tienda" type="radio">
+        <label for="tienda">Recogida en tienda</label><br>
+        <input id="casa" name="fav_language" value="casa" type="radio"> <label
+
+          for="casa">Pedido a domicilio</label><br>
+      </form>
+    </fieldset>
+    <fieldset> <legend>Desea recibir algún tipo de información </legend>
+      <form action="/action_page.php"> <input id="online" name="online" value="online"
+
+          type="checkbox"> <label for="online"> Deseo recibir información por
+          correo electrónico</label><br>
+        <input id="casa" name="casa" value="casa" type="checkbox"> <label for="casa">
+          Deseo recibir información con el pedido</label><br>
+        <input id="noinfo" name="noinfo" value="noinfo" type="checkbox"> <label
+
+          for="noinfo"> No deseo recibir información</label><br>
+      </form>
+    </fieldset>
+    <fieldset> <legend>Elija su menú</legend>
+      <form action="/action_page.php"> <label for="comida">Elije la comida:</label>
+        <select id="comida" name="comida" size="4">
+          <option value="taco">Taco</option>
+          <option value="burrito">Burrito</option>
+          <option value="crunchywrap">Crunchywrap</option>
+          <option value="quesadilla">Quesadilla</option>
+        </select>
+        <br>
+        <br>
+      </form>
+      <form action="/action_page.php"> <label for="complemento">Elije el
+          complemento:</label>
+        <select id="complemento" name="complemento" size="4">
+          <option value="patatas">Patatas</option>
+          <option value="ensalada">Ensalada</option>
+          <option value="nachos">Nachos</option>
+          <option value="batata">Batata</option>
+        </select>
+        <br>
+        <br>
+      </form>
+      <form action="/action_page.php"> <label for="bebidas">Elije 2 bebidas:</label>
+        <select id="bebidas" name="bebidas" size="4" multiple="multiple">
+          <option value="cocacola">Coca-Cola</option>
+          <option value="agua">Agua</option>
+          <option value="fanta">Fanta</option>
+          <option value="cerveza">Cerveza</option>
+        </select>
+        <br>
+        <br>
+      </form>
+      <legend>Puede añadir alguna sugerencia</legend>
+      <form action="/action_page.php">
+  <textarea name="message" style="width:200px; height:200px;">Quitar algun ingrediente, calentar más el pedido, etc.</textarea>
+  <br>
+  <input type="submit">
+</form>
+    </fieldset>
+  </body>
+</html>
