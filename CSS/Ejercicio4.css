@@ -1,0 +1,20 @@
+ 
+  #uno, #tres, #cinco, #siete, #ocho{
+    border: 1px solid black;
+    color: blue;
+    padding: 5px;
+    margin: 5px;
+    background-color: gray;
+  }
+
+  #dos, #cuatro, #seis{
+    background-color: yellow;
+    border: 1px solid black;
+    color: blue;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  #seis{
+    font-size: 200%;
+  }
