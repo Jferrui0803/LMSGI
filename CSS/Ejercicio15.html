@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido en Taco Bell</title>
+    <link rel="stylesheet" href="Ejercicio15.css">
+</head>
+<body>
+    <h2>Taco Bell</h2>
+    <h3>Para realizar el pedido rellene el formulario</h3>
+    <form>
+    <label for="username">Usuario:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Iniciar Sesión</button>
+  </form>
+
+  <br>
+  <br> 
+  
+    <fieldset>
+        <legend>Datos personales</legend>
+                <label for="fname">Nombre:</label>
+                <input id="fname" name="fname" type="text">
+                <label for="lname">Apellido:</label>
+        <input id="lname" name="lname" type="text">
+
+        <label for="correo">Correo electrónico:</label>
+        <input id="correo" name="correo" type="text">
+
+        <label for="domicilio">Dirección:</label>
+        <input id="domicilio" name="domicilio" type="text">
+
+        <label for="localidad">Localidad:</label>
+        <input id="localidad" name="localidad" type="text">
+
+        <label for="cp">Código Postal:</label>
+        <input id="cp" name="cp" type="text">
+
+        <label for="telefono">Teléfono:</label>
+        <input id="telefono" name="telefono" type="text">
+
+    <fieldset>
+        <legend>Elija la opción de entrega</legend>
+        <form>
+            <input id="tienda" name="fav_language" value="tienda" type="radio">
+            <label for="tienda">Recogida en tienda</label>
+    
+            <input id="casa" name="fav_language" value="casa" type="radio">
+            <label for="casa">Pedido a domicilio</label>
+          </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>Desea recibir algún tipo de información</legend>
+        
+            <input id="online" name="online" value="online" type="checkbox">
+            <label for="online">Deseo recibir información por correo electrónico</label>
+    
+            <input id="casa" name="casa" value="casa" type="checkbox">
+            <label for="casa">Deseo recibir información con el pedido</label>
+    
+            <input id="noinfo" name="noinfo" value="noinfo" type="checkbox">
+            <label for="noinfo">No deseo recibir información</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Elija su menú</legend>
+            <label for="comida">Elije la comida:</label>
+            <select id="comida" name="comida" size="4">
+              <option value="taco">Taco</option>
+              <option value="burrito">Burrito</option>
+              <option value="crunchywrap">Crunchywrap</option>
+              <option value="quesadilla">Quesadilla</option>
+            <legend>Puede añadir alguna sugerencia</legend>
+            <textarea name="message" rows="5" placeholder="Quitar algún ingrediente, añadir algún extra, calentar más el pedido, etc."></textarea>
+            <br>
+            <input type="submit" value="Enviar Pedido">
+            <input type="button" value="Borrar Pedido" onclick="borrarPedido()">
+      
+    </fieldset>
+ 
+  </body>
+</html>

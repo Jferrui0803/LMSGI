@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>body { background-color: #E2F47C;
+
+  body { background-color: #E2F47C;
     }
     #global { width:800px; height:800px; margin: 0 auto 0 auto;
     background-color: #ffbbbb;
@@ -20,5 +17,4 @@
     #pie { width:800px; margin: 0 auto 0 auto; background-color: #B4C355; float:
     left;
     }
-  </body>
-</html>
+  

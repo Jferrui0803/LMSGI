@@ -1,0 +1,30 @@
+body{
+    font-size: 4rem;
+    font-family: sans-serif;
+}
+
+.flex-container {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*align-items: flex-start;*/
+    align-content: center;
+    background-color: #404040;
+    /*border-radius: 10px;*/
+    /*border: solid 2px yellow*/
+}
+
+.flex-container > div {
+    padding: 10px;
+    margin : 10px;
+    border: solid 1 px black;
+    /*border-radius: 10px; */
+    background: #f18c55;
+}
+
+.one{height: 100px; align-self: center}
+.two{height: 150 px; margin-left: auto;}
+.three{height: 100px; align-self: f;}
+.four{height: 100px;}
