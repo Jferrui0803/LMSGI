@@ -8,6 +8,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: flex-start;
     /*align-items: flex-start;*/
     align-content: center;
@@ -17,14 +18,33 @@ body{
 }
 
 .flex-container > div {
-    padding: 10px;
+     padding: 10px;
     margin : 10px;
     border: solid 1 px black;
-    /*border-radius: 10px; */
+    /*border-radius: 10px;*/
     background: #f18c55;
 }
 
-.one{height: 100px; align-self: center}
-.two{height: 150 px; margin-left: auto;}
-.three{height: 100px; align-self: f;}
-.four{height: 100px;}
+.one{
+    height: 100px; 
+    /*width: 200px;*/
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.two{
+    height: 150 px;
+   /*margin-left: auto;*/
+    width: 200px;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.three{
+    height: 100px; 
+    width: 200px;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
