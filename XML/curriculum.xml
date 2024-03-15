@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <Datos_personales>
+        <nombre>José Manuel</nombre>
+        <apellidos>Fernández Ruiz</apellidos>
+        <fecha_nacimiento>08/03/2005</fecha_nacimiento>
+        <lugar_nacimiento>Granada, España</lugar_nacimiento>
+        <nacionalidades>
+            <nacionalidad>Española</nacionalidad>
+        </nacionalidades>
+        <DNI>72893650K</DNI>
+        <foto></foto>
+    </Datos_personales>
+    
+    <datos_contacto>
+        <tipo_via>Avenida</tipo_via>
+        <nombre_via>Salvador Allende</nombre_via>
+        <numero>11</numero>
+        <portal>Granados</portal>
+        <escalera>1</escalera>
+        <piso>6ºB</piso>
+        <codigo_postal>18007</codigo_postal>
+        <pais>España</pais>
+        <email></email>
+        <telefono_movil>684786905</telefono_movil>
+        <telefono_fijo></telefono_fijo>
+    </datos_contacto>
+    
+    <datos_contacto_adicionales>
+        <pagina_web></pagina_web>
+        <redes_sociales>
+            <red_social></red_social>
+        </redes_sociales>
+    </datos_contacto_adicionales>
+    
+    <formacion_academica>
+        <estudio>
+            <nombre>MEDAC NEVADA</nombre>
+            <lugar>Armilla,Granada</lugar>
+            <fecha_inicio>Sep, 2021</fecha_inicio>
+            <fecha_fin>Jun, 2023</fecha_fin>
+        </estudio>
+    </formacion_academica>
+    
+    <idiomas>
+        <idioma>
+            <nombre>Ingles</nombre>
+            <nivel_expresion_oral>BUENO</nivel_expresion_oral>
+            <nivel_comprension_oral>BUENO</nivel_comprension_oral>
+            <nivel_expresion_escrita>BUENO</nivel_expresion_escrita>
+            <nivel_comprension_escrita>MEJORABLE</nivel_comprension_escrita>
+            <titulo_acreditativo>CAMBRIDGE</titulo_acreditativo>
+            <nivel_titulo>B1</nivel_titulo>
+        </idioma>
+    </idiomas>
+    
+    <experiencia_laboral>
+        <experiencia>
+            <lugar>Hotel Abades Nevada</lugar>
+            <puesto>Servicio técnico</puesto>
+            <fecha_inicio>12/3/2023</fecha_inicio>
+            <fecha_fin>21/6/2023</fecha_fin>
+        </experiencia>
+    </experiencia_laboral>
+    
+    <datos_adicionales>
+        <aficiones>Aprender de forma autodidacta</aficiones>
+        <disponibilidad_viajar>Sí</disponibilidad_viajar>
+        <vehiculo_propio>Sí</vehiculo_propio>
+        <licencias_permisos_conducir>B</licencias_permisos_conducir>
+    </datos_adicionales>
+</curriculum>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="generoPelicula">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Drama" />
+      <xs:enumeration value="Comedia" />
+      <xs:enumeration value="Terror" />
+      <xs:enumeration value="Thriller" />
+      <xs:enumeration value="Sci-fi and fantasy" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="fechaPelicula">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1900" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="formatoPelicula">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DVD" />
+      <xs:enumeration value="VHS" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="nombreActor">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="duracionPelicula">
+    <xs:restriction base="xs:int" />
+  </xs:simpleType>
+
+
+  <xs:simpleType name="nombreDirector">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="tituloPelicula">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:complexType name="peliculaType">
+    <xs:sequence>
+      <xs:element name="Titulo" type="tituloPelicula" />
+      <xs:element name="Duracion" type="duracionPelicula" />
+      <xs:element name="Genero" type="generoPelicula" />
+      <xs:element name="Actores">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Actor" type="nombreActor" maxOccurs="3" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Fecha" type="fechaPelicula" />
+      <xs:element name="Director" type="nombreDirector" />
+      <xs:element name="Formato" type="formatoPelicula" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="catalogoPeliculasType">
+    <xs:sequence>
+      <xs:element name="Pelicula" type="peliculaType" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:element name="CatalogoPeliculas" type="catalogoPeliculasType" />
+
+</xs:schema>
