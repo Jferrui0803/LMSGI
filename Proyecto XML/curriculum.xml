@@ -10,46 +10,57 @@
             <nacionalidad>Española</nacionalidad>
         </nacionalidades>
         <DNI>72893650K</DNI>
-        <foto></foto>
     </Datos_personales>
     
     <datos_contacto>
         <tipo_via>Avenida</tipo_via>
         <nombre_via>Salvador Allende</nombre_via>
-        <numero>11</numero>
-        <portal>Granados</portal>
+        <numero>25</numero>
+        <portal>14</portal>
         <escalera>1</escalera>
         <piso>6ºB</piso>
         <codigo_postal>18007</codigo_postal>
         <pais>España</pais>
-        <email></email>
+        <email>jferrui0803@ieszaidinvergeles.org</email>
         <telefono_movil>684786905</telefono_movil>
-        <telefono_fijo></telefono_fijo>
+        <telefono_fijo>985463562</telefono_fijo>
     </datos_contacto>
     
-    <datos_contacto_adicionales>
-        <pagina_web></pagina_web>
-        <redes_sociales>
-            <red_social></red_social>
-        </redes_sociales>
-    </datos_contacto_adicionales>
     
     <formacion_academica>
         <estudio>
-            <nombre>MEDAC NEVADA</nombre>
-            <lugar>Armilla,Granada</lugar>
+            <nombre>ESO (Educación secundaria obligatoria)</nombre>
+            <lugar>IES DIEGO DE SILOÉ</lugar>
+            <fecha_inicio>Sep, 2017</fecha_inicio>
+            <fecha_fin>Jun, 2021</fecha_fin>
+        </estudio>
+    </formacion_academica>
+
+    <formacion_academica>
+        <estudio>
+            <nombre>Grado Medio SMR (Sistemas microinformaticos y redes)</nombre>
+            <lugar>MEDAC NEVADA</lugar>
             <fecha_inicio>Sep, 2021</fecha_inicio>
             <fecha_fin>Jun, 2023</fecha_fin>
+        </estudio>
+    </formacion_academica>
+
+    <formacion_academica>
+        <estudio>
+            <nombre>Grado Superior DAW (Desarrollo Aplicaciones WEB)</nombre>
+            <lugar>IES ZAIDIN VERGELES</lugar>
+            <fecha_inicio>Sep, 2023</fecha_inicio>
+            <fecha_fin>Jun, 2025</fecha_fin>
         </estudio>
     </formacion_academica>
     
     <idiomas>
         <idioma>
             <nombre>Ingles</nombre>
-            <nivel_expresion_oral>BUENO</nivel_expresion_oral>
-            <nivel_comprension_oral>BUENO</nivel_comprension_oral>
-            <nivel_expresion_escrita>BUENO</nivel_expresion_escrita>
-            <nivel_comprension_escrita>MEJORABLE</nivel_comprension_escrita>
+            <nivel_expresion_oral>alto</nivel_expresion_oral>
+            <nivel_comprension_oral>alto</nivel_comprension_oral>
+            <nivel_expresion_escrita>medio</nivel_expresion_escrita>
+            <nivel_comprension_escrita>medio</nivel_comprension_escrita>
             <titulo_acreditativo>CAMBRIDGE</titulo_acreditativo>
             <nivel_titulo>B1</nivel_titulo>
         </idioma>
@@ -60,7 +71,7 @@
             <lugar>Hotel Abades Nevada</lugar>
             <puesto>Servicio técnico</puesto>
             <fecha_inicio>12/3/2023</fecha_inicio>
-            <fecha_fin>21/6/2023</fecha_fin>
+            <fecha_fin>10/9/2023</fecha_fin>
         </experiencia>
     </experiencia_laboral>
     
@@ -70,4 +81,5 @@
         <vehiculo_propio>Sí</vehiculo_propio>
         <licencias_permisos_conducir>B</licencias_permisos_conducir>
     </datos_adicionales>
+
 </curriculum>

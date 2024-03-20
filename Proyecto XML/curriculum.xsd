@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+<xs:element name="Datos_personales">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="apellidos" type="xs:string"/>
+                <xs:element name="fecha_nacimiento" type="xs:string"/>
+                <xs:element name="lugar_nacimiento" type="xs:string"/>
+                <xs:element name="nacionalidades">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nacionalidad" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NIF" type="nifType"/>
+                <xs:element name="foto" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+<xs:element name="datos_contacto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tipo_via" type="xs:string"/>
+                <xs:element name="nombre_via" type="xs:string"/>
+                <xs:element name="numero" type="xs:string"/>
+                <xs:element name="portal" type="xs:string"/>
+                <xs:element name="escalera" type="xs:string"/>
+                <xs:element name="piso" type="xs:string"/>
+                <xs:element name="codigo_postal" type="codigoPostalType"/>
+                <xs:element name="pais" type="xs:string"/>
+                <xs:element name="email" type="emailType" minOccurs="0"/>
+                <xs:element name="telefono_movil" type="telefonoMovilType"/>
+                <xs:element name="telefono_fijo" type="telefonoFijoType" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+     
+    <xs:element name="formacion_academica">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="estudio">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="lugar" type="xs:string"/>
+                            <xs:element name="fecha_inicio" type="xs:string"/>
+                            <xs:element name="fecha_fin" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+                    
+                    
+
 <xs:simpleType name="nifType">
         <xs:restriction base="xs:string">
             <xs:pattern value="[0-9]{8}[A-Za-z]{1}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nieType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[XYZ]\d{7}[A-Za-z]" />
         </xs:restriction>
     </xs:simpleType>
 
@@ -13,7 +77,67 @@
         </xs:restriction>
     </xs:simpleType>
 
-   
-    
-    
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".+@.+\..+" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="telefonoMovilType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{9}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="telefonoFijoType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{9}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nivelIdiomaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="bajo" />
+            <xs:enumeration value="medio" />
+            <xs:enumeration value="alto" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tituloIdiomaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="A1" />
+            <xs:enumeration value="A2" />
+            <xs:enumeration value="B1" />
+            <xs:enumeration value="B2" />
+            <xs:enumeration value="C1" />
+            <xs:enumeration value="C2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nivelCompetenciaType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="5" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="licenciaConduccionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="AM" />
+            <xs:enumeration value="A1" />
+            <xs:enumeration value="A2" />
+            <xs:enumeration value="A" />
+            <xs:enumeration value="B" />
+            <xs:enumeration value="B+E" />
+            <xs:enumeration value="C1" />
+            <xs:enumeration value="C" />
+            <xs:enumeration value="D1" />
+            <xs:enumeration value="D1+E" />
+            <xs:enumeration value="D" />
+            <xs:enumeration value="BTP" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
 </xs:schema>

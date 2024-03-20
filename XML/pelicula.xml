@@ -14,6 +14,7 @@
         <Director>Wachowski Brothers</Director>
         <Formato>DVD</Formato>
     </Pelicula>
+
     <Pelicula>
         <Titulo>Titanic</Titulo>
         <Duracion>194</Duracion>
@@ -26,6 +27,7 @@
         <Director>James Cameron</Director>
         <Formato>DVD</Formato>
     </Pelicula>
+
     <Pelicula>
         <Titulo>The Sixth Sense</Titulo>
         <Duracion>106</Duracion>
@@ -38,4 +40,5 @@
         <Director>M. Night Shyamalan</Director>
         <Formato>VHS</Formato>
     </Pelicula>
+    
 </CatalogoPeliculas>
