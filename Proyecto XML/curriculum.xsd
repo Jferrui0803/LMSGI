@@ -1,99 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<xs:element name="Datos_personales">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="nombre" type="xs:string"/>
-                <xs:element name="apellidos" type="xs:string"/>
-                <xs:element name="fecha_nacimiento" type="xs:string"/>
-                <xs:element name="lugar_nacimiento" type="xs:string"/>
-                <xs:element name="nacionalidades">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="nacionalidad" type="xs:string"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-                <xs:element name="NIF" type="nifType"/>
-                <xs:element name="foto" type="xs:string" minOccurs="0"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
 
-<xs:element name="datos_contacto">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="tipo_via" type="xs:string"/>
-                <xs:element name="nombre_via" type="xs:string"/>
-                <xs:element name="numero" type="xs:string"/>
-                <xs:element name="portal" type="xs:string"/>
-                <xs:element name="escalera" type="xs:string"/>
-                <xs:element name="piso" type="xs:string"/>
-                <xs:element name="codigo_postal" type="codigoPostalType"/>
-                <xs:element name="pais" type="xs:string"/>
-                <xs:element name="email" type="emailType" minOccurs="0"/>
-                <xs:element name="telefono_movil" type="telefonoMovilType"/>
-                <xs:element name="telefono_fijo" type="telefonoFijoType" minOccurs="0"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+<!-- Defino los datos complejos de  Datos_Personales -->
+<xs:complexType name="Datos_personales">
+    <xs:sequence>
+      <!-- Defino los elementos de Datos_Personales -->
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="apellidos" type="xs:string" />
+      <xs:element name="fecha_nacimiento" type="xs:date" />
+      <xs:element name="lugar_nacimiento" type="xs:string" />
+      <xs:element name="nacionalidades" type="xs:string" />
+      <xs:element name="identificacion" type="Identificacion" />
+    </xs:sequence>
+  </xs:complexType>
 
-     
-    <xs:element name="formacion_academica">
+    <!-- Defino los datos complejos de Identificacion -->
+  <xs:complexType name="Identificacion">
+    <xs:choice>
+      <!-- Defino los elementos de Identificacion -->
+      <!-- Defino la restricción de los caracteres del Nif-->
+      <xs:element name="nif">
+        <xs:simpleType> 
+          <xs:restriction base="xs:string">
+            <xs:pattern value="\d{8}[A-Z]" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- Defino la restricción de los caracteres del Nie-->
+      <xs:element name="nie">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[XYZ]\d{7}[A-Z]" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+
+    <!-- Defino los datos complejos de Datos_Contacto -->
+  <xs:complexType name="datos_contacto">
+    <xs:sequence>
+      <!-- Defino los elementos de Datos_Contacto -->
+      <xs:element name="tipo_via" type="xs:string" minOccurs="0" />
+      <xs:element name="nombre_via" type="xs:string" minOccurs="0" />
+      <xs:element name="numero" type="xs:string" minOccurs="0" />
+      <xs:element name="portal" type="xs:string" minOccurs="0" />
+      <xs:element name="escalera" type="xs:string" minOccurs="0" />
+      <xs:element name="piso" type="xs:string" minOccurs="0" />
+      <xs:element name="puerta" type="xs:string" minOccurs="0" />
+    <xs:element name="codigo_postal" type="codigoPostalType" />
+    <xs:element name="pais" type="xs:string" />
+    <xs:element name="email" type="emailType" />
+    <xs:element name="telefono_movil" type="telefonoMovilType" />
+    <xs:element name="telefono_fijo" type="telefonoFijoType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+<!-- Defino la restricción de del valor de Codigo Postal-->
+  <xs:simpleType name="codigoPostalType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[0-9]{5}" />
+    </xs:restriction>
+</xs:simpleType>
+
+<!-- Defino la restricción de los caracteres del email-->
+<xs:simpleType name="emailType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" />
+    </xs:restriction>
+</xs:simpleType>
+
+<!-- Defino la restricción de los valores del telefono móvil-->
+<xs:simpleType name="telefonoMovilType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[0-9]{9}" />
+    </xs:restriction>
+</xs:simpleType>
+
+<!-- Defino la restricción de los caracteres del telefóno fijo-->
+<xs:simpleType name="telefonoFijoType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\d{9}" />
+    </xs:restriction>
+</xs:simpleType>
+
+
+   <!-- Definir los datos complejos de formación academica -->
+  <xs:complexType name="formacion_academica">
+    <xs:sequence>
+      <!-- Definir los elementos de  Datos_Academicos -->
+      <xs:element name="estudios" minOccurs="0" maxOccurs="unbounded">
         <xs:complexType>
-            <xs:sequence>
-                <xs:element name="estudio">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="nombre" type="xs:string"/>
-                            <xs:element name="lugar" type="xs:string"/>
-                            <xs:element name="fecha_inicio" type="xs:string"/>
-                            <xs:element name="fecha_fin" type="xs:string"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
+          <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="lugar" type="xs:string" />
+            <xs:element name="fechaInicio" type="xs:date" />
+            <xs:element name="fechaFin" type="xs:date" />
+          </xs:sequence>
         </xs:complexType>
-        </xs:element>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
                     
                     
 
-<xs:simpleType name="nifType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[0-9]{8}[A-Za-z]{1}" />
-        </xs:restriction>
-    </xs:simpleType>
 
-    <xs:simpleType name="nieType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[XYZ]\d{7}[A-Za-z]" />
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="codigoPostalType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[0-9]{5}" />
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="emailType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value=".+@.+\..+" />
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="telefonoMovilType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[0-9]{9}" />
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="telefonoFijoType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="\d{9}" />
-        </xs:restriction>
-    </xs:simpleType>
+    
 
     <xs:simpleType name="nivelIdiomaType">
         <xs:restriction base="xs:string">

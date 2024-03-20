@@ -10,6 +10,7 @@
             <nacionalidad>Española</nacionalidad>
         </nacionalidades>
         <DNI>72893650K</DNI>
+        <NIF>85364792D</NIF>
     </Datos_personales>
     
     <datos_contacto>
@@ -65,6 +66,27 @@
             <nivel_titulo>B1</nivel_titulo>
         </idioma>
     </idiomas>
+
+    <competencias>
+        <competencia>
+            <nombre>Java</nombre>
+            <nivel>2</nivel>
+        </competencia>
+    </competencias>
+
+    <competencias>
+        <competencia>
+            <nombre>HTML</nombre>
+            <nivel>3</nivel>
+        </competencia>
+    </competencias>
+
+    <competencias>
+        <competencia>
+            <nombre>Montaje de equipos</nombre>
+            <nivel>4</nivel>
+        </competencia>
+    </competencias>
     
     <experiencia_laboral>
         <experiencia>
