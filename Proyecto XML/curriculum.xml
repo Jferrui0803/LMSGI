@@ -12,7 +12,7 @@
         <DNI>72893650K</DNI>
         <NIF>85364792D</NIF>
     </Datos_personales>
-    
+
     <datos_contacto>
         <tipo_via>Avenida</tipo_via>
         <nombre_via>Salvador Allende</nombre_via>
@@ -26,8 +26,8 @@
         <telefono_movil>684786905</telefono_movil>
         <telefono_fijo>985463562</telefono_fijo>
     </datos_contacto>
-    
-    
+
+
     <formacion_academica>
         <estudio>
             <nombre>ESO (Educación secundaria obligatoria)</nombre>
@@ -54,7 +54,7 @@
             <fecha_fin>Jun, 2025</fecha_fin>
         </estudio>
     </formacion_academica>
-    
+
     <idiomas>
         <idioma>
             <nombre>Ingles</nombre>
@@ -67,26 +67,33 @@
         </idioma>
     </idiomas>
 
-    <competencias>
-        <competencia>
-            <nombre>Java</nombre>
-            <nivel>2</nivel>
-        </competencia>
-    </competencias>
+    <aptitudes>
+        <competencias>
+            <competencia>
+                <nombre>Java</nombre>
+                <nivel>2</nivel>
+            </competencia>
+        </competencias>
+    </aptitudes>
 
-    <competencias>
-        <competencia>
-            <nombre>HTML</nombre>
-            <nivel>3</nivel>
-        </competencia>
-    </competencias>
+    <aptitudes>
+        <competencias>
+            <competencia>
+                <nombre>HTML</nombre>
+                <nivel>3</nivel>
+            </competencia>
+        </competencias>
+    </aptitudes>
 
-    <competencias>
-        <competencia>
-            <nombre>Montaje de equipos</nombre>
-            <nivel>4</nivel>
-        </competencia>
-    </competencias>
+    <aptitudes>
+        <competencias>
+            <competencia>
+                <nombre>Montaje de equipos</nombre>
+                <nivel>4</nivel>
+            </competencia>
+        </competencias>
+    </aptitudes>
+
     
     <experiencia_laboral>
         <experiencia>
@@ -96,7 +103,7 @@
             <fecha_fin>10/9/2023</fecha_fin>
         </experiencia>
     </experiencia_laboral>
-    
+
     <datos_adicionales>
         <aficiones>Aprender de forma autodidacta</aficiones>
         <disponibilidad_viajar>Sí</disponibilidad_viajar>

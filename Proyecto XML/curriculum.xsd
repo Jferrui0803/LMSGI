@@ -2,10 +2,10 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 
-<!-- Defino los datos complejos de  Datos_Personales -->
+<!-- Defino los datos complejos de  Datos_personales -->
 <xs:complexType name="Datos_personales">
     <xs:sequence>
-      <!-- Defino los elementos de Datos_Personales -->
+      <!-- Defino los elementos de Datos_personales -->
       <xs:element name="nombre" type="xs:string" />
       <xs:element name="apellidos" type="xs:string" />
       <xs:element name="fecha_nacimiento" type="xs:date" />
@@ -38,10 +38,10 @@
     </xs:choice>
   </xs:complexType>
 
-    <!-- Defino los datos complejos de Datos_Contacto -->
+    <!-- Defino los datos complejos de datos_Contacto -->
   <xs:complexType name="datos_contacto">
     <xs:sequence>
-      <!-- Defino los elementos de Datos_Contacto -->
+      <!-- Defino los elementos de datos_Contacto -->
       <xs:element name="tipo_via" type="xs:string" minOccurs="0" />
       <xs:element name="nombre_via" type="xs:string" minOccurs="0" />
       <xs:element name="numero" type="xs:string" minOccurs="0" />
@@ -95,19 +95,37 @@
           <xs:sequence>
             <xs:element name="nombre" type="xs:string" />
             <xs:element name="lugar" type="xs:string" />
-            <xs:element name="fechaInicio" type="xs:date" />
-            <xs:element name="fechaFin" type="xs:date" />
+            <xs:element name="fecha_inicio" type="xs:date" />
+            <xs:element name="fecha_fin" type="xs:date" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+       
+  
+    <!-- Defino los datos complejos de idiomas -->
+  <xs:complexType name="idiomas">
+    <xs:sequence>
+      <!-- Defino los elementos de idiomas -->
+      <xs:element name="idioma" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="nivel_expresion_oral" type="nivelIdiomaType" minOccurs="0" />
+            <xs:element name="nivel_comprension_oral" type="nivelIdiomaType" minOccurs="0" />
+            <xs:element name="nivel_expresion_escrita" type="nivelIdiomaType" minOccurs="0" />
+            <xs:element name="nivel_comprension_escrita" type="nivelIdiomaType" minOccurs="0" />
+            <xs:element name="titulo_acreditativo" type="xs:string" minOccurs="0" />
+            <xs:element name="nivel_titulo" type="tituloIdiomaType" minOccurs="0" />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
                     
-                    
 
-
-    
-
+<!-- Defino las restricciones y los tipos simples de nivelIdiomaType -->
     <xs:simpleType name="nivelIdiomaType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="bajo" />
@@ -116,6 +134,7 @@
         </xs:restriction>
     </xs:simpleType>
 
+<!-- Defino los tipos simples de tituloIdiomaType -->
     <xs:simpleType name="tituloIdiomaType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="A1" />
@@ -127,6 +146,22 @@
         </xs:restriction>
     </xs:simpleType>
 
+<!-- Defino los datos complejos de aptitudes -->
+<xs:complexType name="aptitudes">
+    <xs:sequence>
+      <!-- Defino los elementos de aptitudes -->
+      <xs:element name="competencia" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="nivel" type="nivelCompetenciaType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+<!-- Defino las restricciones y los tipos simples de nivelCompetenciaType -->
     <xs:simpleType name="nivelCompetenciaType">
         <xs:restriction base="xs:integer">
             <xs:minInclusive value="1" />
@@ -134,6 +169,29 @@
         </xs:restriction>
     </xs:simpleType>
 
+<!-- Defino los datos complejos de experiencia laboral -->
+<xs:complexType name="experiencia_laboral">
+    <xs:sequence>
+        <!-- Defino los elementos de experiencia laboral -->
+      <xs:element name="lugar" type="xs:string" />
+      <xs:element name="puesto" type="xs:string" />
+      <xs:element name="fecha_inicio" type="xs:date" />
+      <xs:element name="fecha_fin" type="xs:date" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definirlos datos complejos de datos_adicionales -->
+  <xs:complexType name="datos_adicionales">
+    <xs:sequence>
+      <!-- Definir los elementos de datos_adicionales -->
+      <xs:element name="aficiones" type="xs:string" minOccurs="0" />
+      <xs:element name="disponibilidad_viajar" type="xs:string" minOccurs="0" default="Si" />
+      <xs:element name="vehiculo_propio" type="xs:string" minOccurs="0" default="Si" />
+      <xs:element name="licencias_permisos_conducir" type="licenciaConduccionType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Defino las restricciones y los tipos simples de la licencia de conducir -->
     <xs:simpleType name="licenciaConduccionType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="AM" />
