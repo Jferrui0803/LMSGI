@@ -9,8 +9,11 @@
         <nacionalidades>
             <nacionalidad>Española</nacionalidad>
         </nacionalidades>
-        <DNI>72893650K</DNI>
-        <NIF>85364792D</NIF>
+        <identificacion>
+        <nif>72893650K</nif>
+        <nie>85364792D</nie>
+    </identificacion>
+    <foto>foto.jpg</foto>
     </Datos_personales>
 
     <datos_contacto>

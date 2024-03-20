@@ -11,19 +11,20 @@
       <xs:element name="fecha_nacimiento" type="xs:date" />
       <xs:element name="lugar_nacimiento" type="xs:string" />
       <xs:element name="nacionalidades" type="xs:string" />
-      <xs:element name="identificacion" type="Identificacion" />
+      <xs:element name="identificacion" type="identificacionType" />
+      <xs:element name="foto" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 
     <!-- Defino los datos complejos de Identificacion -->
-  <xs:complexType name="Identificacion">
+  <xs:complexType name="identificacionType">
     <xs:choice>
       <!-- Defino los elementos de Identificacion -->
       <!-- Defino la restricción de los caracteres del Nif-->
       <xs:element name="nif">
         <xs:simpleType> 
           <xs:restriction base="xs:string">
-            <xs:pattern value="\d{8}[A-Z]" />
+            <xs:pattern value="[0-9]{8}[A-Z]" />
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
